@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Coustard&family=Dancing+Script:wght@700&family=Fredoka&family=Poppins:wght@200;300&family=Roboto+Serif:wght@100;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coustard&family=Dancing+Script:wght@700&family=Poppins:wght@200;300;400&family=Roboto+Serif:wght@100;500&display=swap');
+@import 'media-queries.scss';
+@mixin layout {
+    width: 100%;
+    margin: auto;  
+}
+
+@mixin card {
+    border-top: solid 4px rgb(84, 190, 137);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 480px;
+    padding: 2px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.233);
+    &:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.226);
+    }
+}
+
+body{
+    margin-top: 4%;
+}
+header{
+   
+    div {
+        @include layout();
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 10px;
+       
+    }
+    img {
+        width: 133px;
+        height: 100px;
+        border-radius: 50%;
+        border-top:solid 2px #F8DD7D;
+        border-left:solid 2px #F8DD7D;
+    }
+    h3{
+        font-family: 'Fredoka', sans-serif;
+        color: rgba(46, 45, 45, 0.781);
+        text-align: center;
+        line-height: 30px;
+    }
+    .smiley-face{
+        color: rgb(238, 101, 101);
+        font-weight: 100px;
+    }
+}
+nav{
+    @include layout();
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    a{
+        text-decoration: none;
+        color: rgba(59, 59, 59, 0.781);
+        font-family: 'Fredoka', sans-serif; 
+        font-weight: 70px;
+        &:visited{
+            color: #757575;
+        }
+        &:hover{
+            color: #F8DD7D;
+        }
+        
+    }
+}
+.divider_long{
+    border: 2px solid #F8DD7D;
+    width: 210px;
+    margin-left: 15%;
+    margin-top: 30px;
+    animation: mymove;
+    animation-duration: 2s;
+    @keyframes mymove{
+        0%   {top: 0px; width: 100px;}
+    };
+    
+}
+.divider_short{
+    width: 104px;
+    border: 2px solid #F8DD7D;
+    margin-top: 2.4rem;
+    margin-left: 15%;
+}
+
+.title{
+    @include layout();
+    h1{
+        text-align: center;
+         font-family: 'Fredoka', sans-serif; 
+         color: rgba(66, 65, 65, 0.781);
+         padding: 20px;
+    }
+}
+
+main {
+    @include layout();
+    display: flex;
+    justify-content: center;
+    .description{
+        width: 300px;
+        padding-left: 80px;
+        font-family: 'Fredoka', sans-serif; 
+        color: rgba(66, 65, 65, 0.781);
+        line-height: 20px;
+    }
+    .card{
+       @include card();
+        img{
+            width: 420px;
+            height: 270px;
+            padding: 15px;
+            border-radius: 25px;
+            &:hover{
+                transition: 0.7s;
+                width: 440px;
+                height: 280px;
+            }
+        }
+    }
+    a{
+        color: rgb(84, 190, 137);
+    }
+}
+.content{
+    @include layout();
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    .description{
+        width: 300px;
+        padding-left: 80px;
+        font-family: 'Fredoka', sans-serif; 
+        color: rgba(66, 65, 65, 0.781);
+        line-height: 20px;
+    }
+    .card{
+        @include card();
+        border-color: rgb(101, 141, 253);
+        
+        img{
+            width: 420px;
+            height: 270px;
+            padding: 15px;
+            border-radius: 25px;
+            &:hover{
+                transition: 0.7s;
+                width: 440px;
+                height: 280px;
+            }
+            
+        }
+    }
+    a{
+        color: rgb(101, 141, 253);
+    }
+}
+
+.divider_center{
+    @include layout();
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    .divider_long {
+        border: 2px solid #F8DD7D;
+        width: 208px;
+        margin-right: 200px;
+       
+    }
+    .divider_short {
+        width: 104px;
+        margin-right: 200px;
+        border: 2px solid #F8DD7D;
+        margin-top: 2.4rem;
+
+    }
+}
+footer{
+    @include layout();
+    margin-top: 80px;
+    margin-bottom: 50px;
+    font-family: 'Fredoka', sans-serif; 
+    color: rgba(66, 65, 65, 0.781);
+    text-align: center;
+}
